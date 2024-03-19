@@ -1,0 +1,115 @@
+:root{
+    --colorLightPink: hsl(275, 100%, 97%);
+    --colorGrayishPurple: hsl(292, 16%, 49%);
+    --colorDarkPurple: hsl(292, 42%, 14%);
+}
+
+@font-face{
+    font-family: 'workSans';
+    src: url('./fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    font-family: 'workSans', sans-serif;
+    font-weight: 400;
+    background: url(./images/background-pattern-mobile.svg) no-repeat top / contain,
+                var(--colorLightPink);
+}
+
+
+/*MAIN*/
+
+.main-container{
+    background-color: #fff;
+    max-width: 21rem;
+    padding: 2rem 1.375rem 1.75rem;
+    border-radius: 1rem;
+}
+
+.header-title{
+    color: var(--colorDarkPurple);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header-title::before{
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1.5rem;
+    display: inline-block;
+    background: url(./images/icon-star.svg) center / contain; 
+}
+
+.section-title{
+    color: var(--colorDarkPurple);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1.75rem;
+    padding: 0.5rem 4rem 0.5rem 0;
+    background: url(./images/icon-minus.svg) no-repeat center right;
+}
+
+.section-title:hover{
+    cursor: pointer;
+    color: #b528f1;
+}
+
+.section-title:focus{
+    color: #b528f1;
+}
+
+.section-text{
+    color: var(--colorGrayishPurple);
+    font-size: 0.875rem;
+    margin: 2rem 0 3.175rem;
+}
+
+@media screen and (min-width: 768px)
+{
+
+    body{
+        padding-top: 10rem;
+        background: url(./images/background-pattern-desktop.svg) no-repeat top / contain,
+                    var(--colorLightPink);
+    }
+
+    .main-container{
+        max-width: 100%;
+        width: 37.5rem;
+        padding: 3.25rem 2.125rem 2.5rem;
+    }
+
+    .header-title{
+        font-size: 3.8rem;
+    }
+
+    .header-title::before{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .section-title{
+        font-size: 1.1rem;
+    }
+
+    .section-text{
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+
+}
